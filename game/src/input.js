@@ -47,14 +47,14 @@ export function makeInput(canvas) {
   });
 
   window.addEventListener('keydown', (event) => {
-    const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+    const key = event.key.toLowerCase();
     if ([' ', 'ArrowUp', 'ArrowDown'].includes(event.key)) event.preventDefault();
     if (!event.repeat) input.keysPressed.add(key);
     input.keysDown.add(key);
   });
 
   window.addEventListener('keyup', (event) => {
-    const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+    const key = event.key.toLowerCase();
     input.keysDown.delete(key);
   });
 
